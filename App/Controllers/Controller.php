@@ -53,7 +53,6 @@ class Controller
 
     public function adminView()
     {
-
         if ($this->app->action == Application::NOT_FOUND_ADMIN_ACTION){
             $view = VIEWS_PATH . 'notFound' . DS . 'notFound_view.php';
         } else {

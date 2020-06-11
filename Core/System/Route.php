@@ -48,9 +48,7 @@ class Route
     {
 
         $url = explode('/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'), 4);
-
         array_shift($url);
-
         static::$url = implode('/', $url);
 
         if (isset($url[0]) && $url[0] !== ''){
@@ -64,6 +62,8 @@ class Route
         if (isset($url[2]) && $url[2] !== ''){
             $this->app->params = $url[2];
         }
+
+
 
     }
 
